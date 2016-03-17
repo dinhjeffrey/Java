@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
-        System.out.println("Success Organized :)");
+        double num1 = 5.0;
+        double num2 = 1.1;
+        System.out.println(num1+num2);
     }
 }
