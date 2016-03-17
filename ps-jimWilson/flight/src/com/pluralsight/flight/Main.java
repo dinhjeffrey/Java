@@ -3,10 +3,32 @@ package com.pluralsight.flight;
 public class Main {
 
     public static void main(String[] args) {
+        Flight lax1 = new Flight();
+        Flight lax2 = new Flight();
+        Flight lax3;
+
+        for (int i=0; i<148; i++){
+            lax1.add1Passenger();
+        }
+        lax2.add1Passenger();
+
+
+        if (lax1.hasRoom(lax2)) {
+            lax3 = lax1.createNewWithBoth(lax2);
+            System.out.println("seats: " + lax3.seats);
+            System.out.println("passengers: " + lax3.passengers);
+        } else {
+            System.out.println("Doesn't have room");
+        }
+
+
+
+        /* adding 1 passenger
         Flight flight1 = new Flight();
         flight1.add1Passenger();
         flight1.add1Passenger();
         System.out.println(flight1.passengers);
+        */
 
     }
 
@@ -28,6 +50,19 @@ public class Main {
 
         private void handleTooMany() {
             System.out.println("Too many");
+        }
+
+        public boolean hasRoom(Flight f2) {
+            // first passengers is passengers from lax1 if called like this lax1.hasRoom(lax2)
+            int total = passengers + f2.passengers;
+            return total <= seats;
+        }
+
+        public Flight createNewWithBoth (Flight f2) {
+            Flight newFlight = new Flight();
+            newFlight.seats = seats;
+            newFlight.passengers = passengers + f2.passengers;
+            return newFlight;
         }
     }
 }
