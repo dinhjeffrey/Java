@@ -1,4 +1,5 @@
 package com.pluralsight.calcengine;
+import java.util.Arrays;
 
 public class Main {
 
@@ -22,6 +23,11 @@ public class Main {
         }
 
         System.out.println(result);
+
+        /* print out arrays
+        double[] arr = { 5, 3, 1 };
+        System.out.println(Arrays.toString(arr));
+        */
 
         /* For Each Loop
         double[] arr = { 10, 5, 1.6 };
