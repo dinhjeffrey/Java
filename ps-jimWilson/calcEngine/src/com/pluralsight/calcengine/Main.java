@@ -1,41 +1,40 @@
 package com.pluralsight.calcengine;
 import java.util.Arrays;
 
+/*
+creates new arr
+passes values into a method that creates a new instance with the field values
+loops through each element of array and executes the operation in class MathEquation
+prints
+ */
+
 public class Main {
 
     public static void main(String[] args) {
-        double val1 = 100.0;
-        double val2 = 30;
-        double result;
-        char opCode = 'd';
 
-        if (opCode == 'a')
-            result = val1 + val2;
-        else if (opCode == 's')
-            result = val1 - val2;
-        else if (opCode == 'd')
-            result = val2 != 0.0 ? val1 / val2 : 0.0;
-        else if (opCode == 'm')
-            result = val1 * val2;
-        else {
-            System.out.println("Error - Invalid opCode");
-            result = 0.0;
+        MathEquation[] arr = new MathEquation[4]; // creates a new arr of size 4
+        arr[0] = create(100.0, 50.0, 'd');
+        arr[1] = create(25.0, 92.0, 'a');
+        arr[2] = create(225.0, 17.0, 's');
+        arr[3] = create(11.0, 3.0, 'm');
+
+
+        for (MathEquation i : arr) {
+            i.execute();
+            System.out.print("result = ");
+            System.out.println(i.result);
         }
+    }
 
-        System.out.println(result);
+    // creates a new instance and returns MathEquation
+    public static MathEquation create(double leftVal, double rightVal, char opCode)  {
+        MathEquation set = new MathEquation();
+        // creates new instance set. Sets values passed in like 100.0, 50.0, 'd' to those field variables in MathEquation
+        set.leftVal = leftVal;
+        set.rightVal = rightVal;
+        set.opCode = opCode;
 
-        /* print out arrays
-        double[] arr = { 5, 3, 1 };
-        System.out.println(Arrays.toString(arr));
-        */
 
-        /* For Each Loop
-        double[] arr = { 10, 5, 1.6 };
-        double sum = 0;
-        for (double i: arr)
-            sum += i;
-        System.out.println(sum);
-         */
-
+        return set;
     }
 }
