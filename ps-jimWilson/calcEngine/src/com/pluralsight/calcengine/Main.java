@@ -22,7 +22,7 @@ public class Main {
         for (MathEquation i : arr) {
             i.execute();
             System.out.print("result = ");
-            System.out.println(i.result);
+            System.out.println(i.getResult());
         }
     }
 
@@ -30,9 +30,9 @@ public class Main {
     public static MathEquation create(double leftVal, double rightVal, char opCode)  {
         MathEquation set = new MathEquation();
         // creates new instance set. Sets values passed in like 100.0, 50.0, 'd' to those field variables in MathEquation
-        set.leftVal = leftVal;
-        set.rightVal = rightVal;
-        set.opCode = opCode;
+        set.setLeftVal(leftVal);
+        set.setRightVal(rightVal);
+        set.setOpCode(opCode);
 
 
         return set;
