@@ -17,6 +17,18 @@ public class MathEquation {
     public char getOpCode() {return opCode;}
     public void setOpCode(char opCode) {this.opCode = opCode;}
 
+    MathEquation() {}
+
+    MathEquation(char opCode){
+        this.opCode = opCode;
+    }
+
+    MathEquation(double leftVal, double rightVal, char opCode){
+        this(opCode);
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+    }
+
     /*result is different. result executes an operation.
      doesn't make sense to modify results from the outside. They can see it but not modify it.
      in this case we want make our result a read only value. We want an accessor (get) but not a mutator (set)
