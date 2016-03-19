@@ -26,6 +26,7 @@ public class Main {
         else
             System.out.println("Flights not combined.");
 
+        // properly hiding data so it allows us to access it without impacting other code that uses that class
         Flight accessorsAndMutators = new Flight();
         accessorsAndMutators.setSeats(123);
         System.out.println(accessorsAndMutators.getSeats());
