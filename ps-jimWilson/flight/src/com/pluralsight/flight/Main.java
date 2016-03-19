@@ -26,6 +26,10 @@ public class Main {
         else
             System.out.println("Flights not combined.");
 
+        Flight accessorsAndMutators = new Flight();
+        accessorsAndMutators.setSeats(123);
+        System.out.println(accessorsAndMutators.getSeats());
+
 
 
         /* adding 1 passenger
@@ -70,5 +74,14 @@ public class Main {
             newFlight.passengers = passengers + f2.passengers;
             return newFlight;
         }
+
+        public int getSeats() {
+            return seats;
+        }
+
+        public void setSeats(int seats) {
+            this.seats = seats;
+        }
+
     }
 }
