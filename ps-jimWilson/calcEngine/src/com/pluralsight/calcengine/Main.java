@@ -1,6 +1,5 @@
 package com.pluralsight.calcengine;
 import java.util.Arrays;
-
 /*
 creates new arr
 passes values into a method that creates a new instance with the field values
@@ -12,7 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MathEquation[] arr = new MathEquation[4]; // creates a new arr of size 4
+        MathEquation[] arr = new MathEquation[4]; // creates a new instance of arr of size 4
         arr[0] = create(100.0, 50.0, 'd');
         arr[1] = create(25.0, 92.0, 'a');
         arr[2] = create(225.0, 17.0, 's');
