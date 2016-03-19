@@ -31,6 +31,10 @@ public class Main {
         accessorsAndMutators.setSeats(123);
         System.out.println(accessorsAndMutators.getSeats());
 
+        // Passenger class. Learning constructors
+        Passenger fred = new Passenger(2);
+        System.out.println(fred.perBagFee);
+
 
 
         /* adding 1 passenger

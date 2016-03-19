@@ -20,8 +20,7 @@ public class Main {
 
         for (MathEquation i : arr) {
             i.execute();
-            System.out.print("result = ");
-            System.out.println(i.getResult());
+            System.out.println("result = " + i.getResult());
         }
     }
 
