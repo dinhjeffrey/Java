@@ -15,12 +15,14 @@ public class Passenger {
 
     public Passenger(int freeBags) {
         // ************* not sure how the statement below assigns value to perBagFee ********************
+        // this(double) = passenger(double
         this(freeBags > 1 ? 25.0 : 50.0);
         this.freeBags = freeBags;
+
     }
 
     public Passenger(int freeBags, int checkedBags) {
-        this(freeBags);
+        this.freeBags = freeBags;
         this.checkedBags = checkedBags;
     }
 

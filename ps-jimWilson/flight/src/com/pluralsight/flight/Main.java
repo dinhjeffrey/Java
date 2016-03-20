@@ -32,7 +32,7 @@ public class Main {
         System.out.println(accessorsAndMutators.getSeats());
 
         // Passenger class. Learning constructors
-        Passenger fred = new Passenger(2);
+        Passenger fred = new Passenger(1);
         System.out.println(fred.perBagFee);
 
 
